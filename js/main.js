@@ -1,49 +1,65 @@
-document.addEventListener('DOMContentLoaded', function(){
-    console.log('Contenido del DOM cargado');
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Contenido del DOM cargado");
 
-    const textarea = document.querySelector("textarea");
+    const textarea = document.getElementById("origen");
+    const destino = document.getElementById("destino");
 
-    textarea.value = "Este contenido esta listo para ser editado y pasado abajo"
+    const inputs = document.getElementsByTagName("input");
+    const botonMin = document.getElementsByTagName("button")[0];
 
-    const inputs = document.getElementsByTagName('input');
+    const btnReemplazar = document.getElementById("btn-reemplazar");
+    const btnAgregar = document.getElementsByClassName("btn-agregar");
+    const btnVaciar = document.getElementsByClassName("btn-vaciar")[0];
+    const btnMayus = document.getElementsByClassName("btn-convertir-a-mayusculas")[0];
 
-    textarea.addEventListener('input', function(){
-        for (let i = 0; i < inputs.length; i++){
-            inputs[i].disabled = false;
+    // Cargar contenido inicial en el textarea
+    textarea.value = "Este contenido está listo para ser editado y pasarlo abajo.";
+
+    // Habilitar inputs y botón al escribir
+    textarea.addEventListener("input", () => {
+        for (let i = 0; i < inputs.length; i++) {
+        inputs[i].disabled = false;
         }
-
-        const boton = document.getElementsByTagName('button');
-        boton[0].disabled = false;
+        botonMin.disabled = false;
     });
 
-    destino = document.getElementById('destino');
-
-    destino.innerHTML = "<ul></ul>";
-
-    const botonReemplazar = document.getElementById('reemplazar');
-    const botones = document.querySelectorAll('.btn-agregar');
-    
-    botonReemplazar.addEventListener('click', function(){
-        // Aca ira el codigo para reemplazar el texto destino por el de origen
+    // Reemplazar
+    btnReemplazar.addEventListener("click", () => {
+        // Codigo para reemplazar
     });
 
-    botones[0].addEventListener('click', function(){
-        // Codigo para agregar 1 vez el texto al origen
+    // Agregar 1 vez
+    btnAgregar[0].addEventListener("click", () => {
+        // Codigo para agregar 1 vez
     });
 
-    botones[1].addEventListener('click', function(){
-        // Codigo para agregar 5 veces el texto al origen
+    // Agregar 5 veces
+    btnAgregar[1].addEventListener("click", () => {
+        // Codigo para agregar 5 veces
     });
 
-    botones[2].addEventListener('click', function(){
-        // Codigo para agregar 10 veces el texto al origen
+    // Agregar 10 veces
+    btnAgregar[2].addEventListener("click", () => {
+        // Codigo para agregar 10 veces
     });
 
-    botones[3].addEventListener('click', function(){
-        
-        // Codigo para agregar n veces el texto al origen
+    // Agregar n veces
+    btnAgregar[3].addEventListener("click", () => {
+        // Codigo para agregar n veces
+    });
 
-        let n = prompt("Ingrese la cantidad de veces a agregar el texto:");
-        n = parseInt(n);
+    // Vaciar
+    btnVaciar.addEventListener("click", () => {
+        //Codigo para vaciar
+    });
+  
+    // Convertir a mayúsculas   
+    btnMayus.addEventListener("click", () => {
+        // Codigo para convertir a mayusculas (destino)
+    });
+
+    // Convertir a minúsculas
+    botonMin.addEventListener("click", () => {
+        // Codigo para convertir a minusculas (destino)
     });
 });
