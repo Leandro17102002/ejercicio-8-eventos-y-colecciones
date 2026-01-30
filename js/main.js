@@ -26,21 +26,41 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reemplazar
     btnReemplazar.addEventListener("click", () => {
         // Codigo para reemplazar
+         btnReemplazar.addEventListener("click", () => {
+         destino.innerHTML = textarea.value;
+            });
+
     });
 
     // Agregar 1 vez
     btnAgregar[0].addEventListener("click", () => {
         // Codigo para agregar 1 vez
+        btnAgregar[0].addEventListener("click", () => {
+        destino.innerHTML += textarea.value;
+            });
+
     });
 
     // Agregar 5 veces
     btnAgregar[1].addEventListener("click", () => {
         // Codigo para agregar 5 veces
+        btnAgregar[1].addEventListener("click", () => {
+            for (let i = 0; i < 5; i++) {
+                 destino.innerHTML += textarea.value;
+                    }
+                });
+
     });
 
     // Agregar 10 veces
     btnAgregar[2].addEventListener("click", () => {
         // Codigo para agregar 10 veces
+        btnAgregar[2].addEventListener("click", () => {
+             for (let i = 0; i < 10; i++) {
+                    destino.innerHTML += textarea.value;
+                 }
+            });
+
     });
 
     // Agregar n veces
